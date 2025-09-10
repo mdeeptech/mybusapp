@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
+  background-size: 400% 400%;
+  animation: gradientBG 30s ease infinite; /* slow blue gradient */
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+/* Animated gradient */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* FAB BUS text with diagonal letter shine */
+.welcome-text {
+  font-size: 64px;
+  font-weight: 800;
+  position: relative;
+  color: white;
+  background: linear-gradient(120deg, #ffffff, #87cefa, #ffffff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineText 2s infinite linear;
+  margin-bottom: 20px;
+}
+
+@keyframes shineText {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* Subtitle: italic and slightly above */
+.welcome-subtext {
+  font-size: 22px;
+  font-weight: 600;
+  font-style: italic;
+  color: #fff;
+  margin-top: -10px; /* slightly up */
+}

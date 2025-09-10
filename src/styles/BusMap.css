@@ -1,0 +1,128 @@
+
+/* ------------------ User Location Marker ------------------ */
+.custom-user-marker {
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.location-pin {
+  width: 18px;
+  height: 18px;
+  background: #007bff;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.8);
+  margin: 0 auto;
+}
+
+.location-tag {
+  background: white;
+  border: 1px solid #007bff;
+  color: #007bff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin-top: 5px;
+  white-space: nowrap;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ------------------ Bottom Panel ------------------ */
+.bus-panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  padding: 18px 20px;
+  font-family: "Segoe UI", sans-serif;
+  transition: all 0.3s ease-in-out;
+  animation: slideUp 0.35s ease-out;
+  z-index: 999;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.bus-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+}
+
+.bus-detail {
+  font-size: 15px;
+  margin: 5px 0;
+  color: #444;
+}
+
+.panel-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.start-btn,
+.close-btn {
+  flex: 1;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.start-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.start-btn:hover {
+  background-color: #0056b3;
+}
+
+.close-btn {
+  background-color: #e63946;
+  color: white;
+}
+
+.close-btn:hover {
+  background-color: #b71c1c;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .bus-panel {
+    padding: 14px 16px;
+  }
+  .bus-title {
+    font-size: 18px;
+  }
+  .bus-detail {
+    font-size: 14px;
+  }
+  .start-btn,
+  .close-btn {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+}
+
+.bus-panel {
+  overflow-y: auto;
+  max-height: 40%;
+}
+
